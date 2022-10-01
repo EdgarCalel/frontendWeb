@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from 'react-router-dom'
+
 import axios from 'axios';
 
 const {
@@ -7,7 +7,6 @@ const {
 } = process.env;
 
 function Ventas() {
-  const [encaVenta, setEncaVenta] = useState([])
   const [Producto, setProducto] = useState([]);
   const [Clientes, setclientes] = useState([]);
   const [ventaFinal, setventaFinal] = useState([]);
@@ -62,16 +61,16 @@ function Ventas() {
     document.getElementById("encabezadobuton").style.display = 'none';
   }
   const handleSubmitDetalle = async (e) => {
-    e.preventDefault();
-    setventaFinal([
-      ...ventaFinal,
-      detVenta
-    ])
-    setDetVenta({
-        precio_unitario: 0,
-        cantidad: '',
-        idproducto: '' 
-    })
+      e.preventDefault();
+      setventaFinal([
+        ...ventaFinal,
+        detVenta
+      ])
+      setDetVenta({
+          precio_unitario: 0,
+          cantidad: '',
+          idproducto: '' 
+      })
     // await axios.post(`${REACT_APP_SERVER}/compras/create`, inputVen);
   }
 

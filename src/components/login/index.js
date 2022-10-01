@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./index.css"
 import axios from 'axios';
+import LogoPrincipal from "../assets/img/logoPrincipal.jpg"
 const {
     REACT_APP_SERVER,
 } = process.env;
@@ -40,7 +41,7 @@ function Login() {
                 <div className="d-flex justify-content-center h-50" >
                     <div className="user_card">
                         <div className="d-flex justify-content-center">
-                            <div className="login_logo_container"> <img src="https://i.pinimg.com/564x/d4/2f/f3/d42ff3c2001429b63b5b666ec2f54d40.jpg" className="login_logo" alt="Logo" /> </div>
+                            <div className="login_logo_container"> <img src={LogoPrincipal} className="login_logo" alt="Logo" /> </div>
                         </div>
                         <div className="d-flex justify-content-center form_container">
                             <form style={{ width: "320px" }} onClick={(e) => handleSubmit(e)}>

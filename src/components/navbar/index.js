@@ -1,7 +1,7 @@
 import React from 'react'
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./navbar.css"
-import LogoNavbar from "./logoNavbar.jpg"
+import LogoNavbar from "../assets/img/logoNavbar.jpg"
 function Index() {
  
   const DirectionsNavbar = [
@@ -20,20 +20,20 @@ const cerrarSession=()=>{
 }
   return (
     <>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <div className="container-fluid">
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand" >
+          <p className="navbar-brand" >
             <img className='img-thumbnail logoNavbar' src={LogoNavbar} alt="not found" />
-          </a>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          </p>
+          <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               {DirectionsNavbar.map((item, index) => (
-                <li class="nav-item">
-                  <Link class="nav-link active" aria-current="page" to={item.link}>
-                    <span class="material-symbols-outlined" style={{padding:"10px"}}>{item.icon}</span>
+                <li className="nav-item">
+                  <Link className="nav-link active" aria-current="page" to={item.link}>
+                    <span className="material-symbols-outlined" style={{padding:"10px"}}>{item.icon}</span>
                     {item.nombre}
                   </Link>
                 </li>
@@ -42,7 +42,7 @@ const cerrarSession=()=>{
             <div class="d-flex" role="search">
         
         <button 
-          class="btn btn-outline-danger" 
+          className="btn btn-outline-danger" 
           type="submit"
           onClick={()=>{cerrarSession()}}>Log Out</button>
       </div>

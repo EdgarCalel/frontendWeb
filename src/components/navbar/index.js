@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link, useNavigate } from "react-router-dom";
 import "./navbar.css"
+import LogoNavbar from "./logoNavbar.jpg"
 function Index() {
-  let navigate = useNavigate();
+ 
   const DirectionsNavbar = [
     { nombre: 'Ventas', link: "/Ventas", icon: "assignment_ind" },
     { nombre: 'Compras', link: "/Compras", icon: "inventory" },
@@ -24,7 +25,9 @@ const cerrarSession=()=>{
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand" >Comercial Central</a>
+          <a class="navbar-brand" >
+            <img className='img-thumbnail logoNavbar' src={LogoNavbar} alt="not found" />
+          </a>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               {DirectionsNavbar.map((item, index) => (
